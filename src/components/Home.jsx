@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import NavBar from "../components/NavBar1-Homepage";
-import NavBar2 from "../components/Navbar2-Homepage";
-import Thumbnail from "../components/thumbnail-H";
-import Content from "../components/contents-H";
+import NavBar from "./navbar";
+import Banner from "./banner";
+import Thumbnail from "./thumbnail";
+import Content from "./contents";
 import Footer from "./footer";
 
 class Home extends Component {
@@ -11,7 +11,7 @@ class Home extends Component {
     return (
       <React.Fragment>
         <NavBar />
-        <NavBar2 />
+        <Banner />
         <Thumbnail />
         <Content />
         <Footer />

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-export class Navbar2 extends Component {
+class Banner extends Component {
   render() {
     return (
       <div>
-        <header className="header">
+        <header className="header-background">
           <div className="container">
             <div className="row">
               <div className="col-10">
@@ -25,4 +25,4 @@ export class Navbar2 extends Component {
   }
 }
 
-export default Navbar2;
+export default Banner;

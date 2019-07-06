@@ -8,13 +8,13 @@ export default function content(props) {
           <a href="#">
             <img id="img-news" src={img} className="card-img-top" alt="..." />
           </a>
-          <div id="news-body" class="card-body">
+          <div id="news-body" className="card-body">
             <a className="fix" href="#">
               <h5 className="card-title">{header}</h5>
             </a>
             <p className="card-text">{para.substring(0, 150)}</p>
             <p className="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
+              <small className="text-muted">Last updated 3 mins ago</small>
             </p>
           </div>
         </div>

@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import ContentShow from "./content";
 import axios from "axios";
 import parse from "html-react-parser";
+import Modal from "react-awesome-modal";
 
 import { Link } from "react-router-dom";
 import moment from "moment";
-export class Content extends Component {
+class Content extends Component {
   state = {
-    data: null
+    data: null,
+    visible: false
   };
   componentDidMount() {
     axios
@@ -18,19 +19,50 @@ export class Content extends Component {
         this.setState({ data: res.data.items });
       });
   }
+
+  openModal() {
+    this.setState({
+      visible: true
+    });
+  }
+
+  closeModal() {
+    this.setState({
+      visible: false
+    });
+  }
+
   render() {
     console.log(this.state.data);
 
     return (
       <div>
+        <button className="ui button" onClick={() => this.openModal()}>
+          Show Modal
+        </button>
+        <Modal
+          visible={this.state.visible}
+          width="400"
+          height="300"
+          effect="fadeInUp"
+          onClickAway={() => this.closeModal()}
+        >
+          <div>
+            <h1>Title</h1>
+            <p>Some Contents</p>
+            <a href="javascript:void(0);" onClick={() => this.closeModal()}>
+              Close
+            </a>
+          </div>
+        </Modal>
         <div className="container">
           <div className="row display-flex">
             {!this.state.data
               ? "loading..."
-              : this.state.data.reverse().map((data, key) => (
+              : this.state.data.map((data, key) => (
                   <React.Fragment>
                     <div
-                      key={key}
+                      key={data.pubDate}
                       className=" col-sm-6 col-md-4 content-display"
                     >
                       <div className="card-deck">
@@ -67,7 +99,6 @@ export class Content extends Component {
                     </div>
                   </React.Fragment>
                 ))}
-            {/* {} */}
           </div>
         </div>
       </div>
