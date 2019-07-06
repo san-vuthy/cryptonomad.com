@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+
+* {
+  font-family: "Nunito", sans-serif !important;
+}
+
+/* -------------------Home------------------------------- */
+
+.navbar {
+  margin: 0px;
+  padding: 0;
+}
+.container {
+  padding: 0px;
+  margin-top: 0px;
+}
+.logo {
+  width: auto;
+  height: 65px;
+  padding: 0%;
+}
+/* .col-md-4 {
+  display: flex;
+} */
+.content-display {
+  /* display: flex;
+  width: 100% !important; */
+}
+
+.row.display-flex {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+.row.display-flex > [class*="col-"] {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+a:hover {
+  color: #181818;
+}
+.caption h2 {
+  font-weight: bold;
+}
+.card-deck .card {
+  box-shadow: 0 0 40px 0 rgba(197, 197, 197, 0.85) !important;
+  border: 0px solid transparent !important;
+  transition: 0.2s;
+}
+
+.card-deck:hover {
+  transform: rotateY(-5px) !important;
+}
+figure img,
+figcaption {
+  display: none;
+}
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #2d3436;
+  margin-top: 30px;
+  padding: 20px 20px;
+  color: aliceblue;
+}
+
+@media (max-width: 768px) {
+  .navbar-style {
+    flex-direction: column;
+  }
+  .navbar-style li {
+    margin: 0 20px;
+  }
+  .navbar-header-style {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-navbar {
+    display: contents;
+  }
+  #card-content {
+    height: 410px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-style {
+    flex-direction: row;
+    margin: auto;
+  }
+  .navbar-style li {
+    margin: 0 20px;
+  }
+  .navbar-header-style {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #card-content {
+    height: 250px;
+  }
+}
+
+/* ------------------------------------NavBar-H----------------------------------------- */
+
+/* -----header------- */
+.header {
+  height: 35vh;
+  min-height: 200px;
+  background-image: url("/img/Cover.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* logo-cryp */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  margin-top: 60px;
+  margin-left: 40px;
+  padding: 0;
+  filter: brightness();
+}
+.col-12 {
+  padding: 0;
+  margin: 0;
+}
+.par {
+  margin-left: 50px;
+  font-size: 25px;
+  padding: 0;
+  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman",
+    Times, serif;
+}
+a {
+  text-decoration: none !important;
+  color: #181818;
+}
+/* -------------------thumbnail-H------------------------------- */
+.thumbnail {
+  padding: 0;
+  margin-top: 30px;
+}
+
+#more {
+  display: none;
+}
+.para {
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+/* -----------------------content-H--------------------------- */
+
+.card-img-top {
+  height: 200px;
+}
+.card-deck {
+  margin-top: 30px;
+  height: 100%;
+}
+
+/* -------------------------News------------------------------------ */
+
+#cryp-logo1 {
+  width: 80px;
+  padding: 0;
+  margin: 0;
+  /* margin-top: 10px; */
+}
+#cryp-logo2 {
+  width: 35%;
+  padding: 0;
+  margin-left: 50px;
+}
+
+@media (max-width: 992px) {
+  #cryp-logo2 {
+    width: 90%;
+    padding: 0;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #cryp-logo2 {
+    width: 90%;
+    padding: 0;
+    margin-left: 30px;
+  }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  #cryp-logo2 {
+    width: 50%;
+    padding: 0;
+    margin-left: 30px;
+  }
+}
+
+#card-container {
+  width: 60%;
+  /* margin-left: 16px; */
+}
+#img-news {
+  max-height: 200px;
+}
+#news-body {
+  height: 320px;
+}
+#con-card {
+  margin-top: 40px;
+}
+/* ---------------------------------Template---------------------------------------------------- */
+
+#template-card {
+  padding: 0;
+  margin-left: 15%;
+  margin-top: 50px;
+}
+#template-body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+#pa {
+  height: 100%;
+  font-size: 22px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+@media (max-width: 992px) {
+  .navbar-style {
+    flex-direction: column;
+  }
+  .navbar-style li {
+    margin: 0 5px;
+  }
+  .navbar-header-style {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-navbar {
+    display: contents;
+  }
+  #template-card {
+    padding: 0;
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-style {
+    flex-direction: column;
+  }
+  .navbar-style li {
+    margin: 0 20px;
+  }
+  .navbar-header-style {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-navbar {
+    display: contents;
+  }
+  #template-card {
+    padding: 0;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-style {
+    flex-direction: row;
+    margin: auto;
+  }
+  .navbar-style li {
+    margin: 0 20px;
+  }
+  .navbar-header-style {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #template-card {
+    padding: 0;
+    margin-left: 0px;
+  }
+}
+/* ------------------------------------------------------------------------- */
+
+/* // Extra small devices (portrait phones, less than 576px) */
+/* // No media query for `xs` since this is the default in Bootstrap */
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  /* #card-container{
+        width: 93% !important;
+    } */
+}
