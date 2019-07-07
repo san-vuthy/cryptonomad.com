@@ -8,10 +8,12 @@ class Navbar extends Component {
           <div className="container">
             <div className="navbar-header">
               <a className="navbar-brand navbar navbar-expand" href="/home">
-                <img className="logo" alt="Brand" src="./img/fav-icon.png" />
+                <center>
+                  <img className="logo" alt="Brand" src="./img/fav-icon.png" />
+                </center>
               </a>
             </div>
-            <ul className="nav justify-content-end​ navbar-style navbar-nav">
+            {/* <ul className="nav justify-content-end​ navbar-style navbar-nav">
               <li className="nav-item">
                 <a className="nav-link" href="/news">
                   NEWS
@@ -27,7 +29,7 @@ class Navbar extends Component {
                   ABOUT
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </nav>
       </div>

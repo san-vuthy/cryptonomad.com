@@ -50,7 +50,7 @@ class Content extends Component {
           <Modal
             visible={this.state.visible}
             effect="fadeInUp"
-            width="60%"
+            width="50%"
             height="80%"
             onClickAway={() => this.closeModal()}
           >
