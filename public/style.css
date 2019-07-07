@@ -75,6 +75,24 @@ footer {
     color: aliceblue;
 }
 
+.news_modal {
+    padding: 50px;
+}
+
+.news_modal img {
+
+    width: 100% !important;
+    margin-bottom: 20px;
+}
+
+.news_modal p {
+    font-size: 22px;
+}
+
+.ModalOverFlow>div>div>div {
+    overflow: auto !important;
+}
+
 @media (max-width: 768px) {
     .navbar-style {
         flex-direction: column;

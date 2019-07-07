@@ -8,7 +8,10 @@ import moment from "moment";
 class Content extends Component {
   state = {
     data: null,
-    visible: false
+    visible: false,
+    title: "",
+    content: "",
+    thumbnail: ""
   };
   componentDidMount() {
     axios
@@ -20,11 +23,14 @@ class Content extends Component {
       });
   }
 
-  openModal() {
+  openModal = ({ ...data }) => {
+    this.setState({ title: data.title });
+    this.setState({ content: data.content });
+    this.setState({ thumbnail: data.thumbnail });
     this.setState({
       visible: true
     });
-  }
+  };
 
   closeModal() {
     this.setState({
@@ -37,24 +43,24 @@ class Content extends Component {
 
     return (
       <div>
-        <button className="ui button" onClick={() => this.openModal()}>
+        {/* <button className="ui button" onClick={() => this.openModal()}>
           Show Modal
-        </button>
-        <Modal
-          visible={this.state.visible}
-          width="400"
-          height="300"
-          effect="fadeInUp"
-          onClickAway={() => this.closeModal()}
-        >
-          <div>
-            <h1>Title</h1>
-            <p>Some Contents</p>
-            <a href="javascript:void(0);" onClick={() => this.closeModal()}>
-              Close
-            </a>
-          </div>
-        </Modal>
+        </button> */}
+        <div className="ModalOverFlow">
+          <Modal
+            visible={this.state.visible}
+            effect="fadeInUp"
+            width="60%"
+            height="80%"
+            onClickAway={() => this.closeModal()}
+          >
+            <div className="news_modal">
+              <img className="ui fluid image" src={this.state.thumbnail} />
+              <h1>{this.state.title}</h1>
+              <p>{parse(this.state.content)}</p>
+            </div>
+          </Modal>
+        </div>
         <div className="container">
           <div className="row display-flex">
             {!this.state.data
@@ -64,24 +70,21 @@ class Content extends Component {
                     <div
                       key={data.pubDate}
                       className=" col-sm-6 col-md-4 content-display"
+                      onClick={() => this.openModal({ ...data })}
                     >
                       <div className="card-deck">
                         <div className="card">
-                          <Link to="/">
-                            <img
-                              className="card-img-top"
-                              src={data.thumbnail}
-                              alt="Card image cap"
-                            />
-                          </Link>
+                          <img
+                            className="card-img-top"
+                            src={data.thumbnail}
+                            alt="Card image cap"
+                          />
                           <div id="card-content" className="card-body">
-                            <a className="fix" href="Template">
-                              <h3 className="card-title">
-                                {data.title.length > 40
-                                  ? data.title.substring(0, 40) + "..."
-                                  : data.title}
-                              </h3>
-                            </a>
+                            <h3 className="card-title">
+                              {data.title.length > 40
+                                ? data.title.substring(0, 40) + "..."
+                                : data.title}
+                            </h3>
                             <p className="card-text">
                               {parse(data.content.substring(0, 300) + "...")}
                             </p>
